@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{ 
+            /* 隐藏原有的滚动条 */ 
+            overflow: hidden; 
+            } 
+            #wrapper{ 
+            width: 1940px; /* 宽度，通常浏览页面是1920px ，根据实际状况做调整，通常滚动条为20px，大于20即可隐藏 */ 
+            height: 1000px; 
+            overflow-y: scroll; /* 创建新的滚动条*/ 
+            padding-right: 20px; /* 滚动条右边距 */ 
+            }
+    </style>
+</head>
+<body>
+    <form  method="get" id="login">
+        <p>name: <input type="text" id="name" name="name" /></p>
+        <p>password: <input type="text" id="password" name="password" /></p>
+        <input type="submit" value="Submit" onclick='submit()' ></input>
+    </form>
+        
+    
+</body>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    function submit(){
+        var username = $("#name").val();
+        var pas = $("#password").val();
+        $("#login").attr("action","http://www.baidu.com");
+        $("#login").submit();
+    }
+    
+
+
+
+</script>
+</html>
